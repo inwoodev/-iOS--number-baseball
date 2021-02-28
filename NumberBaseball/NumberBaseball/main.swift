@@ -21,10 +21,10 @@ class NumberBaseballGame {
                 return
             }
             let inputNumber = optionalInputNumber.split(separator: " ").map { Int(String($0)) ?? -1 }
-            if isCheckedInput(userInput: inputNumber) == false {
+            if isValidInput(userInput: inputNumber) == false {
                 continue
             }
-            if isCheckedOverlap(userInput: inputNumber) == false {
+            if hasOverlap(userInput: inputNumber) == false {
                 continue
             }
             gameCountRemainder -= 1
@@ -86,7 +86,7 @@ extension NumberBaseballGame {
     
     // MARK: - Check
     
-    func isCheckedOverlap(userInput: [Int]) -> Bool {
+    func hasOverlap(userInput: [Int]) -> Bool {
         let nonRepeatingNumbers = Set(userInput)
         if nonRepeatingNumbers.count == 3 {
             return true
@@ -94,7 +94,7 @@ extension NumberBaseballGame {
             return false
         }
     }
-    func isCheckedInput(userInput: [Int]) -> Bool {
+    func isValidInput(userInput: [Int]) -> Bool {
         if userInput.count == 3 && !userInput.contains(-1) {
             return true
         }
@@ -141,5 +141,4 @@ extension NumberBaseballGame {
 
 // MARK: - Create Instance && Start
 
-let numberBaseballGame = NumberBaseballGame()
-numberBaseballGame.chooseGame()
+NumberBaseballGame().chooseGame()
