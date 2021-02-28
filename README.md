@@ -1,6 +1,6 @@
 # NumberBaseballGame ⚾️
 21.02.23 ~ 21.02.26 🗓 <br>
-@Fezz @Jaems - yagom academy iOS CAMP 2nd 📱<br>
+@Fezz @James - yagom academy iOS CAMP 2nd 📱<br>
 컴퓨터의 랜덤값과 사용자의 입력값을 스트라이크, 볼로 비교하며 맞춰나가는 게임 🎯
 ## Feature
 
